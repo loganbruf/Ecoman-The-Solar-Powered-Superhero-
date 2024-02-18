@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     
     public float speed;
     public float jumpSpeed;
+    public int hearts;
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer sprite;
@@ -67,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
             _projBehaviour.direction = _direction;
             Instantiate(projectile, projectileEmitter);
         }
+        
     }
 
     private bool IsGrounded()
@@ -74,5 +77,14 @@ public class PlayerMovement : MonoBehaviour
         float extraHeight = .1f;
         RaycastHit2D raycastHit = Physics2D.Raycast(_boxCollider2D.bounds.center, Vector2.down, _boxCollider2D.bounds.extents.y + extraHeight, platformLayerMask);
         return raycastHit.collider != null;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Enemy enemy = other.gameObject.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            GameManager.Instance.CurrHearts--;
+        }
     }
 }
