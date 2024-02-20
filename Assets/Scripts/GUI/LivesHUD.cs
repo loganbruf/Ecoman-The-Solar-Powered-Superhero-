@@ -11,7 +11,7 @@ public class HUDActions : MonoBehaviour
     {
         if (GameManager.Instance != null)
         {
-            this.gameObject.GetComponent<TextMeshProUGUI>().text = GameManager.Instance.CurrLives.ToString();
+            this.gameObject.GetComponent<TextMeshProUGUI>().text = GameVariables.CurrLives.ToString();
         }
         
     }

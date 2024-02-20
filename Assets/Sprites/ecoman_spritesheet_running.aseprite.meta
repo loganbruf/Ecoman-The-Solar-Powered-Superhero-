@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638438583316858986
+  platformSettingsDirtyTick: 638439785259357269
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -169,9 +169,9 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 25
+      x: 5
+      y: 100
+      width: 24
       height: 32
     spriteID: 8c5df05d8b0f22d409b0909fc971fa65
     spriteBone: []
@@ -189,11 +189,171 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 40
+      x: 5
+      y: 132
+      width: 25
+      height: 32
+    spriteID: 5f32043fa726480469c63f27e154ce9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: ecoman_spritesheet_running_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 41
+      y: 100
+      width: 20
+      height: 32
+    spriteID: b8de74f0a2768264da6e4dbf853e773b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: ecoman_spritesheet_running_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 41
+      y: 132
+      width: 21
+      height: 32
+    spriteID: e84d01a174028d54995f66fc62e4f972
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: ecoman_spritesheet_running_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5
+      y: 36
+      width: 24
+      height: 32
+    spriteID: 2c029d5766b909845b448c22142a5181
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: ecoman_spritesheet_running_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5
+      y: 68
+      width: 21
+      height: 32
+    spriteID: 2dc6efb6bf47f1f4e91596d625ec2d5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: ecoman_spritesheet_running_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 41
+      y: 36
+      width: 20
+      height: 32
+    spriteID: 88efbcd8d2661cb48b92c43b505ce83a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: ecoman_spritesheet_running_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 41
+      y: 68
+      width: 17
+      height: 32
+    spriteID: 5cb22294f08ab924095a8cd8bdbb4bb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: ecoman_spritesheet_running_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
       y: 4
       width: 21
       height: 32
-    spriteID: 5f32043fa726480469c63f27e154ce9b
+    spriteID: 8172e4fa78887fd48a59e66cc9f05dbb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: ecoman_spritesheet_running_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 40
+      y: 4
+      width: 17
+      height: 32
+    spriteID: e159f1afdc653c74fafcdc77ec38e58f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -213,16 +373,16 @@ ScriptedImporter:
     - name: ecoman_spritesheet_running_Frame_0
       frameIndex: 0
       cellRect:
-        x: 4
+        x: 3
         y: 0
-        width: 57
-        height: 32
+        width: 58
+        height: 160
       spriteId: c58f7802efe9690458e8dace3a139858
     - name: ecoman_spritesheet_running_Frame_1
       frameIndex: 1
       cellRect:
         x: 0
-        y: 0
+        y: 48
         width: 96
         height: 32
       spriteId: 6b5140ba7c3a8114d8670e83719a53c3
@@ -232,7 +392,7 @@ ScriptedImporter:
   - name: DefaultTexturePlatform
     overridden: 0
     ignorePlatformSupport: 0
-    maxTextureSize: 128
+    maxTextureSize: 256
     resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
@@ -268,4 +428,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 32}
+  canvasSize: {x: 64, y: 160}

@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ProjectileBehaviour : MonoBehaviour
 {
     public float speed;
-    public int direction;
+    public int directionX;
+    public int directionY;
     public float timeToDestroy;
     private Rigidbody2D _rb;
     
@@ -14,17 +16,17 @@ public class ProjectileBehaviour : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _rb.velocity = new Vector2(speed * direction, 0);
+        _rb.velocity = new Vector2(speed * directionX, speed * directionY);
         Destroy(gameObject, timeToDestroy);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Enemy enemy = other.GetComponent<Enemy>();
+        Enemy.Enemy enemy = other.GetComponent<Enemy.Enemy>();
         if (enemy != null)
         {
             enemy.health--;
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

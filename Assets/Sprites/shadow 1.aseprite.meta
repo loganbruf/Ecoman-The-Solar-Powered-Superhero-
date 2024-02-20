@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 79da680ea88998c4681b5977a87581ec
+guid: 940189fb851c1164ebfa68a5ae15a4a6
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: ecoman_Frame_0
+  - name: shadow 1
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 22
-      height: 32
-    spriteID: fbad316fd55f64742adcb79f79c18978
+      width: 48
+      height: 16
+    spriteID: b72289a56b0e9244eac06d6cb7c03863
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,139 +141,27 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: ecoman_Frame_1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 85
-      width: 21
-      height: 32
-    spriteID: fb78169c1c988464289a08678b5480d0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 85}
-  - name: ecoman_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 34
-      y: 4
-      width: 18
-      height: 33
-    spriteID: d3cf0f790f6a06d47b288562d28e78b9
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 34, y: 4}
-  - name: ecoman_Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 44
-      width: 21
-      height: 33
-    spriteID: 120dec17d8db09043b6513ffe541f9b4
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 44}
-  - name: ecoman_Frame_4
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 34
-      y: 45
-      width: 18
-      height: 33
-    spriteID: 3ef998ee2e6cca94585e8f7fffe585da
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 34, y: 45}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1341926821
-    name: ecoman
+    guid: -1024681913
+    name: shadow 1
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: ecoman_Frame_0
+    - name: shadow 1
       frameIndex: 0
       cellRect:
-        x: 6
+        x: 0
         y: 0
-        width: 22
-        height: 32
-      spriteId: fbad316fd55f64742adcb79f79c18978
-    - name: ecoman_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 6
-        y: 0
-        width: 21
-        height: 32
-      spriteId: fb78169c1c988464289a08678b5480d0
-    - name: ecoman_Frame_2
-      frameIndex: 2
-      cellRect:
-        x: 6
-        y: 0
-        width: 18
-        height: 33
-      spriteId: d3cf0f790f6a06d47b288562d28e78b9
-    - name: ecoman_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 6
-        y: 0
-        width: 21
-        height: 33
-      spriteId: 120dec17d8db09043b6513ffe541f9b4
-    - name: ecoman_Frame_4
-      frameIndex: 4
-      cellRect:
-        x: 6
-        y: 0
-        width: 18
-        height: 33
-      spriteId: 3ef998ee2e6cca94585e8f7fffe585da
+        width: 48
+        height: 16
+      spriteId: b72289a56b0e9244eac06d6cb7c03863
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 48, y: 16}

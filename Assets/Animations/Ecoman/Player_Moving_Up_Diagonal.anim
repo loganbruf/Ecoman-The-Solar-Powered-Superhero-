@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ecoman_Moving
+  m_Name: Player_Moving_Up_Diagonal
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -23,7 +23,7 @@ AnimationClip:
     - time: 0
       value: {fileID: -8328560057807445007, guid: e228b03d460c41541965defe75223dd0, type: 3}
     - time: 0.16666667
-      value: {fileID: 5136647877235254300, guid: e228b03d460c41541965defe75223dd0, type: 3}
+      value: {fileID: 7387832222030577350, guid: e228b03d460c41541965defe75223dd0, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -47,7 +47,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: -8328560057807445007, guid: e228b03d460c41541965defe75223dd0, type: 3}
-    - {fileID: 5136647877235254300, guid: e228b03d460c41541965defe75223dd0, type: 3}
+    - {fileID: 7387832222030577350, guid: e228b03d460c41541965defe75223dd0, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

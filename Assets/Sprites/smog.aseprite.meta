@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4dbc701c9d140dd48be434c34b5c6b74
+guid: 30bc1357034ad9e4d9572da294af5e14
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: ecoman 1
+  - name: smog
     originalName: 
-    pivot: {x: 0.40909094, y: 0}
+    pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 22
-      height: 32
-    spriteID: 9d04248e174672e46b30335512537c24
+      width: 32
+      height: 30
+    spriteID: 3e375df975b4a0e48bfb9d0cfd5868bf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,20 +144,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1563815594
-    name: ecoman 1
+    guid: -46517452
+    name: smog
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: ecoman 1
+    - name: smog
       frameIndex: 0
       cellRect:
-        x: 7
-        y: 0
-        width: 22
-        height: 32
-      spriteId: 9d04248e174672e46b30335512537c24
+        x: 0
+        y: 2
+        width: 32
+        height: 30
+      spriteId: 3e375df975b4a0e48bfb9d0cfd5868bf
     linkedCells: []
     parentIndex: -1
   platformSettings: []
