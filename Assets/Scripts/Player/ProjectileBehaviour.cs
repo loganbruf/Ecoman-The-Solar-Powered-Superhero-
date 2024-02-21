@@ -22,11 +22,9 @@ public class ProjectileBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Enemy.Enemy enemy = other.GetComponent<Enemy.Enemy>();
-        if (enemy != null)
-        {
-            enemy.health--;
-            Destroy(gameObject);
-        }
+        var enemy = other.GetComponent<Enemy.Enemy>();
+        if (enemy == null) return;
+        enemy.health--;
+        Destroy(gameObject);
     }
 }

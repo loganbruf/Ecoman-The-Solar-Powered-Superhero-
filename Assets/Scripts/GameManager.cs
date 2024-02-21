@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
-    public int lives;
+    
     public int hearts;
     public Transform spawnpoint;
     public GameObject player;
@@ -37,10 +36,9 @@ public class GameManager : MonoBehaviour
         }
 
         CurrHearts = hearts;
-        GameVariables.Lives = lives;
         if (GameVariables.CurrLives < 0)
         {
-            GameVariables.CurrLives = GameVariables.Lives;
+            GameVariables.ResetLives();
         }
     }
 

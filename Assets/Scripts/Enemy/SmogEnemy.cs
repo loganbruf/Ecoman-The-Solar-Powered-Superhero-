@@ -36,6 +36,11 @@ public class SmogEnemy : Enemy.Enemy
             _phase = _phase == -1 ? 1 : -1;
             _timer = phaseTime;
         }
+        
+    }
+
+    private void FixedUpdate()
+    {
         // Calculate the sine wave offset
         float waveOffsetY = Mathf.Sin((Time.time - _startTime) * frequency);
 
@@ -46,5 +51,4 @@ public class SmogEnemy : Enemy.Enemy
         
         transform.position = newPosition;
     }
-    
 }

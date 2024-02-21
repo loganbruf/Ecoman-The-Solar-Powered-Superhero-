@@ -23,4 +23,11 @@ public class Shadows : MonoBehaviour
         player.TakeDamage(1);
         _currTime = timer;
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        var player = other.gameObject.GetComponent<PlayerActions>();
+        if (player == null) return;
+        _currTime = timer;
+    }
 }

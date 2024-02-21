@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -12,6 +13,8 @@ public class PlayerActions : MonoBehaviour
     public float speed;
     public float jumpSpeed;
     public float fireRate;
+    public float onHitCooldown;
+    public float blinkAmount;
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer sprite;
@@ -22,15 +25,16 @@ public class PlayerActions : MonoBehaviour
     private ProjectileBehaviour _projBehaviour;
     private BoxCollider2D _boxCollider2D;
     private int _directionX = 1; //Current direction player is facing.
-    
-    
-    
     private Vector3 _projEmitterPosRight;
     private Vector3 _projEmitterPosLeft;
     private float _dirX; //Input direction from horizontal axis.
     private float _dirY; //Input direction from vertical axis.
     private float _fireRateTimer;
     private static readonly int Movement = Animator.StringToHash("movement");
+    private float _onHitCooldownTimer;
+    private bool _wasHit;
+    private float _blink;
+    private float _blinkTimer;
 
     private void Start()
     {
@@ -39,11 +43,42 @@ public class PlayerActions : MonoBehaviour
         _boxCollider2D = transform.GetComponent<BoxCollider2D>();
         _projEmitterPosRight = projectileEmitter.localPosition;
         _projEmitterPosLeft = new Vector3(0f-_projEmitterPosRight.x, _projEmitterPosRight.y, _projEmitterPosRight.z);
+        _blink = onHitCooldown / blinkAmount;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_wasHit)
+        {
+            _onHitCooldownTimer -= Time.deltaTime;
+            _blinkTimer -= Time.deltaTime;
+            if (_onHitCooldownTimer <= 0)
+            {
+                _wasHit = false;
+            }
+
+            
+            if (_blinkTimer <= 0 && sprite.isVisible)
+            {
+                sprite.enabled = false;
+                _blinkTimer = _blink;
+            }
+
+            if (_blinkTimer <= 0 && !sprite.isVisible)
+            {
+                sprite.enabled = true;
+                _blinkTimer = _blink;
+            }
+        }
+        else
+        {
+            if (!sprite.isVisible)
+            {
+                sprite.enabled = true;
+            }
+        }
+        
         _dirX = Input.GetAxisRaw("Horizontal");
         _dirY = Input.GetAxisRaw("Vertical");
         
@@ -154,23 +189,25 @@ public class PlayerActions : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Enemy.Enemy enemy = other.gameObject.GetComponent<Enemy.Enemy>();
-        if (enemy != null)
-        {
-            TakeDamage(1);
-        }
+        var enemy = other.gameObject.GetComponent<Enemy.Enemy>();
+        if (enemy == null || _wasHit) return;
+        TakeDamage(1);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         var enemy = other.gameObject.GetComponent<Enemy.Enemy>();
-        if (enemy == null) return;
+        if (enemy == null || _wasHit) return;
         TakeDamage(1);
+        
     }
 
     public void TakeDamage(int damage)
     {
         GameManager.Instance.CurrHearts -= damage;
+        _onHitCooldownTimer = onHitCooldown;
+        _blinkTimer = _blink;
+        _wasHit = true;
         _oofSound.Play();
     }
     
