@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 976468873525856162}
   - component: {fileID: 4890606074324442742}
   - component: {fileID: 4208303193991105915}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ecoman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &1093638809015374628
@@ -179,7 +179,10 @@ MonoBehaviour:
     m_Bits: 256
   speed: 2
   jumpSpeed: 5
-  hearts: 3
+  fireRate: 0
+  onHitCooldown: 0
+  blinkAmount: 0
+  minYValue: 0
   rb: {fileID: 2528380251735708215}
   animator: {fileID: 4890606074324442742}
   sprite: {fileID: 8376848043939651555}
@@ -311,7 +314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6184495600516571823}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectileEmitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}

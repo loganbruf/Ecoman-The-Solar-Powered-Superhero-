@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     public int hearts;
     public Transform spawnpoint;
     public GameObject player;
-    [NonSerialized] public int CurrHearts;
     
+    private int _currHearts;
     private static GameManager _instance;
     private Queue<Enemy.Enemy> _disabledEnemies = new Queue<Enemy.Enemy>();
     private AudioSource _wompwomp;
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
             _instance = this;
         }
 
-        CurrHearts = hearts;
+        _currHearts = hearts;
         if (GameVariables.CurrLives < 0)
         {
             GameVariables.ResetLives();
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (CurrHearts <= 0 && !_soundPlaying)
+        if (_currHearts <= 0 && !_soundPlaying)
         {
             _wompwomp.Play();
             _soundPlaying = true;
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         player.transform.position = spawnpoint.position;
     }
 
-    public void LoseLife()
+    private void LoseLife()
     {
         GameVariables.CurrLives--;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -81,6 +81,33 @@ public class GameManager : MonoBehaviour
         _soundPlaying = false;
         Time.timeScale = 1;
         LoseLife();
+    }
+
+    public void ChangeHealth(int health)
+    {
+        int healthIn = _currHearts + health;
+        if (healthIn > hearts)
+        {
+            healthIn = hearts;
+        }
+
+        _currHearts = healthIn;
+    }
+
+    public void SetHealth(int health)
+    {
+        int healthIn = health;
+        if (healthIn > hearts)
+        {
+            healthIn = hearts;
+        }
+
+        _currHearts = healthIn;
+    }
+
+    public int GetHearts()
+    {
+        return _currHearts;
     }
     
 }

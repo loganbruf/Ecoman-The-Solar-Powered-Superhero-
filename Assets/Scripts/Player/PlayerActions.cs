@@ -15,6 +15,7 @@ public class PlayerActions : MonoBehaviour
     public float fireRate;
     public float onHitCooldown;
     public float blinkAmount;
+    public float minYValue;
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer sprite;
@@ -77,6 +78,11 @@ public class PlayerActions : MonoBehaviour
             {
                 sprite.enabled = true;
             }
+        }
+
+        if (transform.position.y <= minYValue)
+        {
+            GameManager.Instance.SetHealth(0);
         }
         
         _dirX = Input.GetAxisRaw("Horizontal");
@@ -204,11 +210,16 @@ public class PlayerActions : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        GameManager.Instance.CurrHearts -= damage;
+        GameManager.Instance.ChangeHealth(-damage);
         _onHitCooldownTimer = onHitCooldown;
         _blinkTimer = _blink;
         _wasHit = true;
         _oofSound.Play();
+    }
+
+    public void RestoreHealth(int health)
+    {
+        GameManager.Instance.ChangeHealth(health);
     }
     
 }

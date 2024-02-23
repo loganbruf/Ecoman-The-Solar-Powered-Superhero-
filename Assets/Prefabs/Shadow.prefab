@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8816534451831882105}
   - component: {fileID: 2757738580916599277}
   - component: {fileID: 4211537514489603608}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee1d1f8bbb42a464880c0c88cb98559c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0.5
+  timer: 2
 --- !u!60 &4211537514489603608
 PolygonCollider2D:
   m_ObjectHideFlags: 0

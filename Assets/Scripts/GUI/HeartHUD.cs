@@ -19,7 +19,7 @@ public class HeartHUD : MonoBehaviour
     {
         for (int i = 0; i < _hearts.Length; i++)
         {
-            if (GameManager.Instance.CurrHearts >= i + 1)
+            if (GameManager.Instance.GetHearts() >= i + 1)
             {
                 _hearts[i].enabled = true;
             }
