@@ -123,12 +123,24 @@ public class PlayerActions : MonoBehaviour
             }
             else
             {
-                _projBehaviour.directionX = (int)_dirX;
+                _projBehaviour.directionX = _dirX switch
+                {
+                    < 0 => -1,
+                    > 0 => 1,
+                    _ => 0
+                };
             }
-            _projBehaviour.directionY = (int)_dirY;
+
+            _projBehaviour.directionY = _dirY switch
+            {
+                < 0 => -1,
+                > 0 => 1,
+                _ => 0
+            };
+            
             if (_fireRateTimer <= 0)
             {
-                Instantiate(projectile, projectileEmitter);
+                Instantiate(projectile, projectileEmitter.transform.position, projectileEmitter.rotation);
                 _fireRateTimer = fireRate;
             }
             else
@@ -189,14 +201,14 @@ public class PlayerActions : MonoBehaviour
     private bool IsGrounded()
     {
         float extraHeight = .1f;
-        RaycastHit2D raycastHit = Physics2D.Raycast(_boxCollider2D.bounds.center, Vector2.down, _boxCollider2D.bounds.extents.y + extraHeight, platformLayerMask);
+        RaycastHit2D raycastHit = Physics2D.Raycast(_boxCollider2D.bounds.center + new Vector3(-0.2f * _directionX, 0f, 0f), Vector2.down, _boxCollider2D.bounds.extents.y + extraHeight, platformLayerMask);
         return raycastHit.collider != null;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         var enemy = other.gameObject.GetComponent<Enemy.Enemy>();
-        if (enemy == null || _wasHit) return;
+        if (enemy == null || _wasHit || enemy.health <= 0) return;
         TakeDamage(1);
     }
     

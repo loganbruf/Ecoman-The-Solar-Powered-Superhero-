@@ -25,6 +25,11 @@ public class ProjectileBehaviour : MonoBehaviour
         var enemy = other.GetComponent<Enemy.Enemy>();
         if (enemy == null) return;
         enemy.health--;
+        var sound = other.GetComponent<AudioSource>();
+        if (sound != null && !sound.isPlaying)
+        {
+            sound.Play();
+        }
         Destroy(gameObject);
     }
 }

@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     {
         _wompwomp = GetComponent<AudioSource>();
         _soundPlaying = false;
+        Time.timeScale = 1;
     }
 
     void Update()

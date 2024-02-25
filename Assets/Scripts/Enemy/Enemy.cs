@@ -11,10 +11,10 @@ namespace Enemy
 
         public void DestroyOnZeroHealth()
         {
-            if (health <= 0)
-            {
-                Destroy(gameObject);
-            }
+            if (health > 0) return;
+            var sound = gameObject.GetComponent<AudioSource>();
+            if (sound.isPlaying) return;
+            Destroy(gameObject);
         }
     }
 }
